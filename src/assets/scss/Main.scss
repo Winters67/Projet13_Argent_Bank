@@ -1,0 +1,15 @@
+//general conf and vars
+
+@import "../scss/_config.scss";
+@import "../scss/global.scss";
+
+//Components
+
+@import "../../components/Hearder/Header.scss";
+@import "../../components/Footer/Footer.scss";
+
+//Pages
+
+@import "../../views/Home/Home.scss";
+@import "../../views//Login/Login.scss";
+
