@@ -5,4 +5,6 @@ $BREAKPOINT-TABLETS: "only screen and (min-width: 920px)";
 $BREAKPOINT-MOBILE: "only screen and (min-width: 720px)";
 
 /*|---------------|MIXINS|---------------*/
-
+@mixin bg-dark {
+    background-color: #12002b;
+  }

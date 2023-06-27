@@ -1,0 +1,17 @@
+/*|---------------|MIXINS|---------------*/
+.ErreurContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.ErreurContainer h1 {
+  margin-top: 100px;
+  font-weight: 700;
+  font-size: 288px;
+}
+.ErreurContainer p {
+  font-size: 36px;
+}
+.ErreurContainer a {
+  margin-top: 152px;
+}/*# sourceMappingURL=NotFoundPage.css.map */
