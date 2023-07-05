@@ -1,39 +1,48 @@
 import React from 'react';
-import "./Login.scss"
+import "./Login.scss";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    startRequest,
+    loginSuccess,
+    loginFailure
+} from '../../reducers/userReducer';
 
 const Login = () => {
-    let navigate = useNavigate();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const error = useSelector(state => state.user.error);
 
-    const handleSubmit = event => {
-        // event.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        dispatch(startRequest());
 
-        // Récupérer les valeurs du formulaire
-        const username = event.target.elements.username.value;
+        const email = event.target.elements.email.value;
         const password = event.target.elements.password.value;
 
-        // Envoyer une requête HTTP POST à l'API de connexion
-        axios.post('http://localhost:3001/api/v1/user/login', {
-            email: username,
-            password
-        })
-            .then(response => {
-                const data = response.data;
-                if (data.token) {
-                    // Si la connexion a réussi, sauvegarder le jeton dans le stockage local
-                    localStorage.setItem('token', data.token);
-                    // Rediriger l'utilisateur vers la page profile
-                    navigate('/profile');
-                } else {
-                    // Gérer les erreurs de connexion ici...
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
+        try {
+            const response = await axios.post('http://localhost:3001/api/v1/user/login', {
+                email: email,
+                password: password
             });
-    }
+
+            const data = response.data;
+            if (data.body && data.body.token) {
+                dispatch(loginSuccess({
+                    user: { email: email },
+                    token: data.body.token
+                }));
+
+                localStorage.setItem('token', data.body.token);
+                navigate('/profile');
+            } else {
+                dispatch(loginFailure({ error: 'Login failed.' }));
+            }
+        } catch (error) {
+            dispatch(loginFailure({ error: 'Login failed. Please check your email and password and try again.' }));
+        }
+    };
 
     return (
         <main className="main">
@@ -42,12 +51,12 @@ const Login = () => {
                 <h1>Sign In</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="input-wrapper">
-                        <label htmlFor="username">Username</label>
-                        <input type="text" id="username" />
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" name="email" />
                     </div>
                     <div className="input-wrapper">
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="password" />
+                        <input type="password" id="password" name="password" />
                     </div>
                     <div className="input-remember">
                         <input type="checkbox" id="remember-me" />
@@ -55,9 +64,10 @@ const Login = () => {
                     </div>
                     <button type="submit" className="sign-in-button">Sign In</button>
                 </form>
+                {error && <div className="error-message">{error}</div>}
             </section>
         </main>
     );
-}
+};
 
 export default Login;
