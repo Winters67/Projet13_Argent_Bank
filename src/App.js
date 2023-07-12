@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Hearder/Hearder";
 import Footer from "./components/Footer/Footer";
 import Home from "./views/Home/Home";
@@ -7,13 +7,9 @@ import Login from "./views/Login/Login";
 import Profile from "./views/Profile/Profile";
 
 function App() {
-  const location = useLocation();
-
   return (
     <div className="App">
-      {location.pathname === "/login" || location.pathname === "/" ? (
-        <Header />
-      ) : null}
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

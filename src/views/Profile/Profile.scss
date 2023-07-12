@@ -121,3 +121,36 @@
     width: 200px;
   }
 }
+
+.changeName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.positionInput {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.positionInput input {
+  width: 100%;
+  height: 30px;
+}
+
+.PositionButton {
+  display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 200px; 
+    margin-left: auto; 
+    margin-right: auto;
+
+    button{
+      width: 60px;
+      height: 30px;
+    }
+}

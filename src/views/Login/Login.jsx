@@ -34,7 +34,6 @@ const Login = () => {
                     token: data.body.token
                 }));
 
-                localStorage.setItem('token', data.body.token);
                 navigate('/profile');
             } else {
                 dispatch(loginFailure({ error: 'Login failed.' }));

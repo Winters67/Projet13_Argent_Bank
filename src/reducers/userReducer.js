@@ -21,7 +21,6 @@ const userSlice = createSlice({
       state.isLoading = false;
       state.user = action.payload.user;
       state.token = action.payload.token;
-      localStorage.setItem("token", action.payload.token);
       console.log(state.token);
     },
     loginFailure: (state, action) => {
@@ -64,9 +63,5 @@ export const {
   logout,
 } = userSlice.actions;
 
-// Création du reducer combiné avec Redux Toolkit
-const rootReducer = combineReducers({
-  user: userSlice.reducer,
-});
 
-export default rootReducer;
+export default userSlice.reducer;
