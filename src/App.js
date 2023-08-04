@@ -14,7 +14,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
-
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
@@ -23,3 +22,4 @@ function App() {
 }
 
 export default App;
+

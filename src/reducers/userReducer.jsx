@@ -1,4 +1,4 @@
-import { createSlice, combineReducers } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 // Définition de l'état initial pour le reducer user
 const initialState = {

@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">Argent Bank</h3>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center"> Une application web complète et responsive pour gérer vos comptes bancaires en toute simplicité.
+    <br> 
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📝 Table of Contents
 
-### `npm test`
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [TODO](../TODO.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧐 About <a name = "about"></a>
 
-### `npm run build`
+Argent Bank est une application web de gestion bancaire. Les utilisateurs peuvent visiter la page d'accueil, se connecter au système, se déconnecter, voir et modifier leur profil, et conserver les données dans la base de données. Dans la phase 2, nous introduirons une fonctionnalité de transactions, permettant aux utilisateurs de visualiser toutes leurs transactions pour le mois en cours, d'afficher les détails d'une transaction dans une autre vue, et d'ajouter, de modifier ou de supprimer des informations sur une transaction.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[![Made-with-Javascript](https://img.shields.io/badge/Made%20with-Javascript-green)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+[![Axios](https://img.shields.io/badge/axios-v1.4.0-blue)](https://github.com/axios/axios)
+[![React](https://img.shields.io/badge/React-v18.2.0-blue)](https://fr.reactjs.org/)
+[![React-DOM](https://img.shields.io/badge/React--DOM-v18.2.0-blue)](https://fr.reactjs.org/)
+[![React-Router-DOM](https://img.shields.io/badge/React--Router--DOM-v6.14.0-yellow)](https://reactrouter.com/docs/en/v6)
+[![React-Scripts](https://img.shields.io/badge/React--Scripts-v5.0.1-orange)](https://www.npmjs.com/package/react-scripts)
+[![Sass](https://img.shields.io/badge/Sass-v1.63.6-ff69b4)](https://sass-lang.com/)
+[![@reduxjs/toolkit](https://img.shields.io/badge/%40reduxjs%2Ftoolkit-v1.9.5-blue)](https://www.npmjs.com/package/@reduxjs/toolkit)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-### `npm run eject`
+Ces instructions vous donneront une copie du projet en cours d'exécution sur votre machine locale à des fins de développement et de test. Voir le déploiement pour les notes sur comment déployer le projet sur un système live.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js
+- npm
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Installez les dépendances :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
 
-## Learn More
+### Installing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Pour lancer l'application en mode développement :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm run dev:server
 
-### Code Splitting
+Pour peupler la base de données :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm run populate-db
 
-### Analyzing the Bundle Size
+### Tony Stark
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- First Name: `Tony`
+- Last Name: `Stark`
+- Email: `tony@stark.com`
+- Password: `password123`
 
-### Making a Progressive Web App
+### Steve Rogers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- First Name: `Steve`,
+- Last Name: `Rogers`,
+- Email: `steve@rogers.com`,
+- Password: `password456`
 
-### Advanced Configuration
+## 🚀 Deployment <a name = "deployment"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Pour déployer l'application, utilisez la commande suivante :
 
-### Deployment
+## ⛏️ Built Using <a name = "built_using"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Express](https://expressjs.com/) - Server Framework
+- [React](https://reactjs.org/) - Web Framework
+- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Redux](https://redux.js.org/) - State Management
 
-### `npm run build` fails to minify
+## ✍️ Authors <a name = "authors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@Winters67](https://github.com/Winters67)
