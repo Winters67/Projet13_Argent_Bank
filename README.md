@@ -91,45 +91,10 @@ Pour déployer l'application, utilisez la commande suivante :
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 - [Redux](https://redux.js.org/) - State Management
 
+## API Documentation
+
+To learn more about how the API works, once you have started your local environment, you can visit: http://localhost:3001/api-docs
+
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@Winters67](https://github.com/Winters67)
-
-````yaml
-swagger: '2.0'
-info:
-  title: Bank Argent API documentation
-  description: Contains all available API endpoints in this codebase
-  version: '1.0.0'
-  termsOfService: 'http://swagger.io/terms/'
-host: localhost:3001
-basePath: /api/v1
-schemes:
-  - http
-paths:
-  /user/login:
-    post:
-      tags:
-        - User Module
-      summary: Login
-      description: API for Login
-      parameters:
-        - in: body
-          name: body
-          description: Login Payload
-          required: true
-          schema:
-            $ref: '#/definitions/Login'
-      produces:
-        - application/json
-      responses:
-        '200':
-          description: Login Successfully
-          schema:
-            $ref: '#/definitions/LoginResponse'
-        '400':
-          description: Invalid Fields
-        '500':
-          description: Internal Server Error
-          ```
-````
