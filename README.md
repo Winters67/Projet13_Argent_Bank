@@ -58,6 +58,7 @@ npm install
 ### Installing
 
 Pour lancer l'application en mode développement :
+dossier : Argent_Bank/server
 
 npm run dev:server
 

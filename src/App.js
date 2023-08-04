@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Hearder/Hearder";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./views/Home/Home";
 import NotFoundPage from "./views/NotFoundPage/NotFoundPage";
@@ -22,4 +22,3 @@ function App() {
 }
 
 export default App;
-
