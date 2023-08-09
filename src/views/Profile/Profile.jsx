@@ -10,8 +10,9 @@ const Profile = () => {
     const { user, isLoading, error, token } = useSelector(state => state.user);
 
     const [isEditing, setIsEditing] = useState(false);
-    const [firstName, setFirstName] = useState(user ? user.firstName : '');
-    const [lastName, setLastName] = useState(user ? user.lastName : '');
+    const [firstName, setFirstName] = useState(user && user.firstName ? user.firstName : '');
+    const [lastName, setLastName] = useState(user && user.lastName ? user.lastName : '');
+    
 
     useEffect(() => {
         const fetchData = async () => {
@@ -71,12 +72,12 @@ const Profile = () => {
                 {isEditing ? (
                     <div className='changeName'>
                         <div className='positionInput'>
-                        <input placeholder={user.firstName} type="text" value={firstName} onChange={e => setFirstName(e.target.value)} />
-                        <input  placeholder={user.lastName}type="text" value={lastName} onChange={e => setLastName(e.target.value)} />
+                            <input placeholder={user.firstName} type="text" value={firstName} onChange={e => setFirstName(e.target.value)} />
+                            <input placeholder={user.lastName} type="text" value={lastName} onChange={e => setLastName(e.target.value)} />
                         </div>
                         <div className='PositionButton'>
-                        <button onClick={handleSaveClick}>Save</button>
-                        <button onClick={() => setIsEditing(false)}>Cancel</button>
+                            <button onClick={handleSaveClick}>Save</button>
+                            <button onClick={() => setIsEditing(false)}>Cancel</button>
                         </div>
 
                     </div>
